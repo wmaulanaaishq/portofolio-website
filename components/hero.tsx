@@ -5,11 +5,11 @@ import { motion } from "framer-motion"
 import { Github, Linkedin, Instagram, Twitter, Mail, ArrowUpRight } from "lucide-react"
 
 const socials = [
-  { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-  { label: "X", href: "https://x.com", icon: Twitter },
-  { label: "Email", href: "mailto:hello@wahyu.dev", icon: Mail },
+  { label: "GitHub", href: "https://github.com/wmaulanaaishq", icon: Github },
+  { label: "LinkedIn", href: "https://linkedin.com/wmaulanaaishq", icon: Linkedin },
+  { label: "Instagram", href: "https://instagram.com/wmaulanaaishq", icon: Instagram },
+  { label: "X", href: "https://x.com/wmaulanaaishq", icon: Twitter },
+  { label: "Email", href: "mailto:maulaishaq1@gmail.com", icon: Mail },
 ]
 
 const ease = [0.22, 1, 0.36, 1] as const
