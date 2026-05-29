@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import { Geist, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Geist, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4, Playfair_Display } from 'next/font/google'
 import { FloatingNav } from '@/components/layout/floating-nav'
 import { SceneBackground } from '@/components/layout/scene-background'
 import { SamuraiBackground } from '@/components/layout/samurai-background'
@@ -11,6 +11,7 @@ import { SamuraiBackground } from '@/components/layout/samurai-background'
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ["400","500","600","700","800","900"], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
   title: 'Wahyu Maulana — AI Engineer & Founder',
@@ -43,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className="dark bg-[#050507]">
-      <body className="font-sans antialiased bg-[#050507] text-white">
+      <body className={`font-sans antialiased bg-[#050507] text-white ${playfair.variable}`}>
         <SceneBackground />
         <SamuraiBackground />
         <FloatingNav />

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Trophy, Award, GraduationCap, Medal } from "lucide-react"
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion"
 
 const experience = [
@@ -12,10 +11,10 @@ const experience = [
 ]
 
 const achievements = [
-  { icon: Trophy, title: "10x Hackathon Wins", detail: "NexHacks, CalHacks, AWS, and more" },
-  { icon: GraduationCap, title: "Full-ride Scholarship", detail: "Computer Engineering" },
-  { icon: Award, title: "Best AI Project", detail: "National Tech Competition" },
-  { icon: Medal, title: "Cloud & ML Certified", detail: "AWS · TensorFlow Developer" },
+  { title: "10x Hackathon Wins", detail: "NexHacks, CalHacks, AWS, and more" },
+  { title: "Full-ride Scholarship", detail: "Computer Engineering" },
+  { title: "Best AI Project", detail: "National Tech Competition" },
+  { title: "Cloud & ML Certified", detail: "AWS · TensorFlow Developer" },
 ]
 
 export function Experience() {
@@ -54,20 +53,23 @@ export function Experience() {
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-white">Achievements</h2>
         </Reveal>
-        <StaggerGroup className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {achievements.map(({ icon: Icon, title, detail }) => (
-            <StaggerItem key={title} className="h-full">
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                className="glass flex h-full flex-col gap-3 rounded-2xl p-5 shadow-lg shadow-black/20 transition-[border-color] hover:border-white/25"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 text-violet-200">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <h3 className="text-base font-semibold text-white">{title}</h3>
-                <p className="text-sm text-white/60">{detail}</p>
-              </motion.div>
+        <StaggerGroup className="mt-10 space-y-2">
+          {achievements.map((item, i) => (
+            <StaggerItem key={item.title}>
+              <div className="relative pl-8">
+                <span className="absolute left-0 top-3 h-2.5 w-2.5 rounded-full bg-violet-400 shadow-[0_0_12px] shadow-violet-500" />
+                {i !== achievements.length - 1 && (
+                  <span className="absolute left-[5px] top-6 h-full w-px bg-white/10" />
+                )}
+                <motion.div
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 24 }}
+                  className="glass rounded-2xl p-5 shadow-lg shadow-black/20 transition-colors hover:bg-white/[0.07]"
+                >
+                  <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                  <p className="mt-1 text-sm text-white/60">{item.detail}</p>
+                </motion.div>
+              </div>
             </StaggerItem>
           ))}
         </StaggerGroup>

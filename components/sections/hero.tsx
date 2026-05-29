@@ -36,9 +36,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.05, ease }}
             className="text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
-            <span className="text-white">Hi, I&apos;m </span>
-            <span className="text-gradient">Wahyu.</span>
+            <span
+              className="text-white"
+              style={{
+                backgroundImage: 'linear-gradient(180deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >Hi, I&apos;m Wahyu.</span>
           </motion.h1>
 
           <motion.p
