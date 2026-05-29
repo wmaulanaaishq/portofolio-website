@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { ContactFooter } from "@/components/contact-footer"
+import { ContactFooter } from "@/components/layout/contact-footer"
 
 export const metadata: Metadata = {
   title: "Resume — Wahyu Maulana",

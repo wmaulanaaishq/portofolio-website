@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
-import { PageHeader } from "@/components/page-header"
-import { Projects } from "@/components/projects"
+import { PageHeader } from "@/components/layout/page-header"
+import { Projects } from "@/components/sections/projects"
 
 export const metadata: Metadata = {
   title: "Projects — Wahyu Maulana",

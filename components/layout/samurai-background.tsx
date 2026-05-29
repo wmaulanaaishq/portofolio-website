@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import * as THREE from "three"
 
 function isWebGLAvailable(): boolean {
   try {
@@ -48,7 +49,6 @@ export function SamuraiBackground() {
       }
 
       try {
-        const THREE = await import("three")
         if (destroyed) return
 
         // ── Renderer with error handling ──
@@ -84,7 +84,7 @@ export function SamuraiBackground() {
 
         // Handle context loss
         const canvas = renderer.domElement
-        canvas.addEventListener("webglcontextlost", (e) => {
+        canvas.addEventListener("webglcontextlost", (e: Event) => {
           e.preventDefault()
           console.warn("WebGL context lost")
         })
@@ -92,7 +92,7 @@ export function SamuraiBackground() {
           console.log("WebGL context restored")
         })
 
-        container.appendChild(canvas)
+        container?.appendChild(canvas)
         Object.assign(canvas.style, {
           position: "absolute",
           inset: "0",

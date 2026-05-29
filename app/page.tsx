@@ -1,5 +1,5 @@
-import { Hero } from "@/components/hero"
-import { Experience } from "@/components/experience"
+import { Hero } from "@/components/sections/hero"
+import { Experience } from "@/components/sections/experience"
 
 export default function HomePage() {
   return (

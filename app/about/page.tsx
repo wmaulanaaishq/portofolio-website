@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
-import { About } from "@/components/about"
-import { Experience } from "@/components/experience"
+import { About } from "@/components/sections/about"
+import { Experience } from "@/components/sections/experience"
 
 export const metadata: Metadata = {
   title: "About — Wahyu Maulana",
