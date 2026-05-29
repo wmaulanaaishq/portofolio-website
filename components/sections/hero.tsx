@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Github, Linkedin, Instagram, Twitter, Mail, ArrowUpRight } from "lucide-react"
+import { Typewriter } from "@/components/ui/typewriter"
 
 const socials = [
   { label: "GitHub", href: "https://github.com/wmaulanaaishq", icon: Github },
@@ -50,6 +51,15 @@ export function Hero() {
             intelligent products — from machine learning systems to polished
             full-stack experiences.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.24, ease }}
+            className="mt-6 text-xl font-medium text-white/90 sm:text-2xl"
+          >
+            I love <Typewriter strings={["Machine Learning,", "building scalable systems,", "tackling complex problems,", "creating polished UX,"]} />
+          </motion.div>
 
           {/* socials */}
           <motion.div
