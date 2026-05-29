@@ -37,7 +37,7 @@ export function FloatingNav() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "glass-strong flex items-center gap-1 rounded-full px-2 py-2 transition-shadow duration-300 sm:gap-2",
+          "glass-strong flex items-center gap-1 rounded-full px-3 py-2.5 transition-shadow duration-300 sm:gap-2",
           scrolled ? "shadow-2xl shadow-black/50" : "shadow-none",
         )}
         aria-label="Primary"
@@ -50,7 +50,7 @@ export function FloatingNav() {
               href={link.href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "relative rounded-full px-4 py-2 text-sm font-medium transition-colors sm:px-5",
+                "relative rounded-full px-5 py-2 text-[15px] font-medium tracking-wide transition-colors sm:px-6",
                 active ? "text-white" : "text-white/55 hover:text-white",
               )}
             >
